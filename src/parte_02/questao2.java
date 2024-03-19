@@ -1,9 +1,8 @@
 package parte_02;
 
-
+import java.util.Scanner;
 public class questao2 {
 
-    import java.util.Scanner;
     public static Scanner sc = new Scanner(System.in);
 
     static void condicional1(int num){
@@ -60,36 +59,45 @@ public class questao2 {
 
         do {
             System.out.println("Insira a condicional que deseja verificar (0 para sair): ");
-            opcao = next.Int();
+            opcao = sc.nextInt();
 
             switch(opcao) {
                 case 1:
-                    num = next.Int();
+                    System.out.println("Insira um numero para verificar se e par ou impar:");
+                    num = sc.nextInt();
                     condicional1(num);
                     break;
 
                 case 2:
-                    num = next.Int();
+                    System.out.println("Insira um numero para verificar se e multiplo de 7:");
+                    num = sc.nextInt();
                     condicional2(num);
                     break;
 
                 case 3:
-                    num = next.Int();
+                    System.out.println("Insira a nota do aluno para verificar se foi aprovado:");
+                    num = sc.nextInt();
                     condicional3(num);
                     break;
 
                 case 4:
-                    num = next.Int();
+                    System.out.println("Insira a nota do aluno para verificar seu conceito");
+                    num = sc.nextInt();
                     condicional4(num);
                     break;
 
                 case 5:
-                    num = next.Int();
-                    int num2 = next.Int();
+                    System.out.println("Insira dois numeros para verificar qual e o maior:");
+                    num = sc.nextInt();
+                    int num2 = sc.nextInt();
                     condicional5(num, num2);
                     break;
 
                 case 0:
+                    break;
+
+                default:
+                    System.out.println("Opcao invalida");
                     break;
             }
         } while(opcao != 0);
